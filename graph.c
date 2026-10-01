@@ -30,7 +30,7 @@ Graph* createGraph() {
     Graph* g = (Graph*)malloc(sizeof(Graph));
     if (!g) return NULL;
 
-    f->adjacencyMap = map_create(is_equal_string);
+    g->adjacencyMap = map_create(is_equal_string);
     return g;
 }
 
