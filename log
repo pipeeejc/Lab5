@@ -33,3 +33,17 @@ Fri Oct  2 07:45:32 PM UTC 2026:
  1 file changed, 11 insertions(+)
  tests:  0|0
 6170830
+Fri Oct  2 07:48:20 PM UTC 2026: 
+ graph.c | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addEdge’:
+graph.c:59:9: error: expected identifier or ‘(’ before ‘=’ token
+   59 |     Edge= new_edge = (Edge*)malloc(sizeof(Edge));
+      |         ^
+graph.c:60:9: error: ‘new_edge’ undeclared (first use in this function)
+   60 |     if(!new_edge) return;
+      |         ^~~~~~~~
+graph.c:60:9: note: each undeclared identifier is reported only once for each function it appears in
+edba26f

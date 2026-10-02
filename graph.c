@@ -53,6 +53,21 @@ void addNode(Graph* g, const char* label) {
 void addEdge(Graph* g, const char* src, const char* dest, int weight) {
     if (!g || !src || !dest) return;
 
+    List* edges = (List*)map_search(g->adjacencyMap, (void*)src);
+    if(!edges) return;
+
+    Edge= new_edge = (Edge*)malloc(sizeof(Edge));
+    if(!new_edge) return;
+
+    new_edge->target = (char*)malloc(strlen(dest) + 1);
+    if(!new_edge->target) {
+        free(new_edge);
+        return;
+    }
+    strcpy(new_edge->target, dest);
+    new_edge->weight = weight;
+
+    list_pushBack(edges, new_edge);
 }
 
 List* getEdges(Graph* g, const char* label) {
