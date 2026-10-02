@@ -47,3 +47,17 @@ graph.c:60:9: error: ‘new_edge’ undeclared (first use in this function)
       |         ^~~~~~~~
 graph.c:60:9: note: each undeclared identifier is reported only once for each function it appears in
 edba26f
+Fri Oct  2 07:48:52 PM UTC 2026: 
+ graph.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addEdge’:
+graph.c:59:11: error: expected identifier or ‘(’ before ‘=’ token
+   59 |     Edge* = new_edge = (Edge*)malloc(sizeof(Edge));
+      |           ^
+graph.c:60:9: error: ‘new_edge’ undeclared (first use in this function)
+   60 |     if(!new_edge) return;
+      |         ^~~~~~~~
+graph.c:60:9: note: each undeclared identifier is reported only once for each function it appears in
+e2c2932
